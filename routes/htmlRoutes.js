@@ -1,28 +1,13 @@
-module.exports =  function(app){
+var connection = require('../db/connect');
 
-    
-app.get("/", function(req, res){
+module.exports = function(app) {
+	app.get("/", function(req, res) {
+		connection.query('SELECT * FROM tacos', function(err, tacos) {
+			if ( err ) return console.log(err);
 
-
-
-var tacodata = [{
-    id : 1,
-    task : "study"
-},
-{
-    id : 2,
-    task: "celebrate"
-}
-
-]
-
-
-res.render("index", {orders : tacodata})
-
-
-})
-
-app.get("/contact")
-
+			res.render("index", {tacos : tacos});
+		});
+	});
+		// app.get("/contact")
 }
 
