@@ -12,6 +12,8 @@
   	<li>
   	   
        <p>{{name}}</p>
+			 <p>MMM... SO Yummy!	</p>
+			 <img src="assets/tacobelldog.jpg" alt="taco" style="width:304px;height:228px;">
 			 {{!-- Taking index id and name of taco to send through the form --}}
 		<form action="/api/eattaco" method="post">
              <input type="hidden" name="name" value="{{name}}">
@@ -29,6 +31,7 @@
   	<li>
   	   
        <p>{{name}}</p>
+			 
 			 
   	</li>
   {{/each}}
