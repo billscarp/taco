@@ -1,11 +1,12 @@
 
+
 <h1>Taco Builder</h1>
 
 <h3>Enter in a taco that you would like to eat.</h3>
 <div id="tacopic">
 	<img src="assets/taco.jpeg" alt="Mountain View" style="width:304px;height:228px;">
 </div>
-
+{{!-- list of new tacos works like a foreach loop.  Each loop goes through array that is send over from api routes --}}
 <ul>
   {{#each tacos}}
   	<li>
@@ -17,6 +18,8 @@
              <input type="hidden" name="tacoid" value="{{@index}}">
                  <button type="submit" id="donebt">Eat the taco!</button>
 								 </form>
+
+			{{!-- This is the right array after taco button loop					  --}}
   	</li>
   {{/each}}
 </ul>
@@ -30,6 +33,8 @@
   	</li>
   {{/each}}
 </ul>
+
+{{!-- This is the button to add a new taco --}}
 
 <form>
 	<input type="text" id="name">
