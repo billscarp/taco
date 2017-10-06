@@ -6,7 +6,7 @@ var exphbs = require("express-handlebars");
 
 
 // import routes (html, api)
-var htmlRoutes = require("./routes/htmlRoutes.js");
+//var htmlRoutes = require("./routes/htmlRoutes.js");
 var apiRoutes = require("./routes/apiRoutes.js");
 
 
@@ -27,7 +27,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Calling my files.
-htmlRoutes(app);
+//htmlRoutes(app);
 // API routes are for ajax(javascript) requests
 apiRoutes(app);
 

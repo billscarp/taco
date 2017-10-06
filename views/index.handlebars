@@ -1,12 +1,29 @@
-<h1>Task Saver</h1>
+<h1>Taco Builder</h1>
 
-<h3>Save the tasks you need to get to later</h3>
+<h3>Enter in a taco that you would like to eat.</h3>
+<div id="tacopic">
+	<img src="assets/taco.jpeg" alt="Mountain View" style="width:304px;height:228px;">
+</div>
 
 <ul>
   {{#each tacos}}
   	<li>
-  	   <p>ID: {{id}}</p>
-       <p>Name: {{name}}</p>
+  	   
+       <p>{{name}}</p>
+			 <form method="post" action="/api/eattaco"> 
+			 
+			 <button type="button" id="donebtn" tacoid="{{@index}}">Eat the taco!!!</button>
+			</form>
+  	</li>
+  {{/each}}
+</ul>
+<h1>TACOS EATEN</h1>
+<ul>
+  {{#each tacosmain}}
+  	<li>
+  	   
+       <p>{{name}}</p>
+			 
   	</li>
   {{/each}}
 </ul>

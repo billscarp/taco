@@ -1,5 +1,7 @@
+// Created left and right arrays
+
 var larray = [];
-var rarray; [];
+var rarray = [];
 
 // exporting app function to server
 module.exports = function(app) {
@@ -13,6 +15,24 @@ module.exports = function(app) {
 	larray.push(taco);
 		console.log(larray);
 		// Sending the left array to the handlers file (index)
-			res.render('index', {tacos:larray});
+			res.redirect('/');
 		});
-}
+		app.get("/", function (req, res) {
+			res.render("index", { tacos: larray });
+		});
+	app.post('/api/eattaco', function(req, res) {
+		var tacoid = {
+			name: req.body.tacoid
+		};
+
+// Pushing in new taco to left array
+
+	rarray.push(taco);
+		console.log(rarray);
+		// Sending the left array to the handlers file (index)
+			res.redirect('/');
+		});
+		app.get("/", function (req, res) {
+			res.render("index", { tacos: larray, tacosmain: rarray });
+		});
+	}
