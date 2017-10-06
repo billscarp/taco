@@ -18,7 +18,12 @@ module.exports = function(app) {
 			res.redirect('/');
 		});
 		
+	// request is coming in from button and the results are redirecting to the index (see line 40) 	
+
 	app.post('/api/eattaco', function(req, res) {
+
+	// eat the taco butto variables 
+		
 		var tacoid = {
 			name: req.body.tacoid
 		};
@@ -32,7 +37,8 @@ module.exports = function(app) {
 	rarray.push(taconame);
 		console.log(rarray);
 		larray.splice(tacoid,1);
-		// Sending the left array to the handlers file (index)
+
+// Sending the left array to the handlers file (index)
 			res.redirect('/');
 		});
 		app.get("/", function (req, res) {

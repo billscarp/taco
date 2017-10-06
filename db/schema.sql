@@ -1,3 +1,5 @@
+-- Database file-- 
+
 DROP DATABASE IF EXISTS bill_s_7;
 CREATE DATABASE bill_s_7;
 
