@@ -1,16 +1,18 @@
-var connection = require('../db/connect');
+var larray = [];
+var rarray; [];
 
+// exporting app function to server
 module.exports = function(app) {
 	app.post('/api/tacos', function(req, res) {
 		var taco = {
 			name: req.body.name
 		};
-		
-		connection.query('INSERT INTO tacos SET ?', taco, function(err, result) {
-			if ( err ) return console.log(err);
 
-			console.log('Taco saved successfully!');
-			res.redirect('/');
+// Pushing in new taco to left array
+
+	larray.push(taco);
+		console.log(larray);
+		// Sending the left array to the handlers file (index)
+			res.render('index', {tacos:larray});
 		});
-	});		
 }
