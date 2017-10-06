@@ -1,16 +1,35 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 
-}
 
-p {
-   padding: 9px 45px;
-    margin-bottom: 10px;
-    background: none;
-    border: 2px solid #12bbe5;
-    font-size: 1.2em;
-    color: #12bbe5;
-    outline: none;  
-}
+body {
+    position: relative;
+    width: 100%;
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+    width: 500px;
+    text-align: center;
+   
+    display: block;
+    overflow: auto;
+  }
+
+
+    ul {
+        list-style-position: inside;
+        list-style-type: none;
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+        width: 400px;
+        border: 1px solid black;
+        
+    }
+  
+
+
+
+    
+
+        
+    
+    

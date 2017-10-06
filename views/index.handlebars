@@ -4,7 +4,7 @@
 
 <h3>Enter in a taco that you would like to eat.</h3>
 <div id="tacopic">
-	<img src="assets/taco.jpeg" alt="Mountain View" style="width:304px;height:228px;">
+	<img src="assets/taco.jpeg" alt="taco" style="width:304px;height:228px;">
 </div>
 {{!-- list of new tacos works like a foreach loop.  Each loop goes through array that is send over from api routes --}}
 <ul>
@@ -23,7 +23,7 @@
   	</li>
   {{/each}}
 </ul>
-<h1>TACOS EATEN</h1>
+<h3>TACOS EATEN</h3>
 <ul>
   {{#each tacosmain}}
   	<li>
@@ -35,7 +35,7 @@
 </ul>
 
 {{!-- This is the button to add a new taco --}}
-
+<p>Type in your choice of taco below:</p>
 <form>
 	<input type="text" id="name">
 	<button type="submit" id="submit">Submit</button>
