@@ -1,3 +1,4 @@
+
 <h1>Taco Builder</h1>
 
 <h3>Enter in a taco that you would like to eat.</h3>
@@ -10,10 +11,12 @@
   	<li>
   	   
        <p>{{name}}</p>
-			 <form method="post" action="/api/eattaco"> 
-			 
-			 <button type="button" id="donebtn" tacoid="{{@index}}">Eat the taco!!!</button>
-			</form>
+			 {{!-- Taking index id and name of taco to send through the form --}}
+		<form action="/api/eattaco" method="post">
+             <input type="hidden" name="name" value="{{name}}">
+             <input type="hidden" name="tacoid" value="{{@index}}">
+                 <button type="submit" id="donebt">Eat the taco!</button>
+								 </form>
   	</li>
   {{/each}}
 </ul>

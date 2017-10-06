@@ -17,18 +17,21 @@ module.exports = function(app) {
 		// Sending the left array to the handlers file (index)
 			res.redirect('/');
 		});
-		app.get("/", function (req, res) {
-			res.render("index", { tacos: larray });
-		});
+		
 	app.post('/api/eattaco', function(req, res) {
 		var tacoid = {
 			name: req.body.tacoid
 		};
 
+		var taconame = {
+			name: req.body.name
+		};
+
 // Pushing in new taco to left array
 
-	rarray.push(taco);
+	rarray.push(taconame);
 		console.log(rarray);
+		larray.splice(tacoid,1);
 		// Sending the left array to the handlers file (index)
 			res.redirect('/');
 		});
